@@ -23,3 +23,4 @@ Notas y pasos pendientes:
 - Elegir el proveedor de hosting (GitHub Pages o Netlify) y dejar la configuración correspondiente (eliminar `netlify.toml` si no se va a usar).
 - Verificar registros DNS para `maestradalissameza.com`.
 - Ejecutar Lighthouse y comprobar accesibilidad / SEO / rendimiento.
+
