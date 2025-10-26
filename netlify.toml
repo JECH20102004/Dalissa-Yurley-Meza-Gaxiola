@@ -1,0 +1,18 @@
+# Configuración básica de Netlify para un sitio estático
+
+[build]
+  # Directorio que Netlify publicará. 
+  # "." significa la raíz del proyecto, donde están index.html, style.css, etc.
+  publish = "."
+  
+  # Comando de construcción. Para un sitio estático simple, no se necesita.
+  command = ""
+
+# Regla de redirección para sitios tipo "Single Page App" (SPA)
+# Esto asegura que si alguien refresca la página o va a un enlace directo,
+# Netlify sirva tu index.html y no un error 404.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
