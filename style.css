@@ -1,209 +1,212 @@
-/* --- Reseteo Básico --- */
-* { 
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box; 
+/* Estilos Generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* --- Estilos Generales del Body --- */
-body { 
-  font-family: 'Nunito', sans-serif; 
-  background: #fdf6f0; 
-  color: #333; 
-  padding: 20px; 
-  display: flex; 
-  justify-content: center; 
-  align-items: flex-start; 
-  min-height: 100vh; 
+h1, h2, h3 {
+    color: #007bff; /* Azul primario */
 }
 
-/* --- Tarjeta Principal --- */
-.card { 
-  max-width: 900px; 
-  width: 100%; 
-  background: #fff; 
-  border-radius: 20px; 
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12); 
-  overflow: hidden; 
-  animation: fadeIn 1s ease; 
+a {
+    color: #007bff;
+    text-decoration: none;
 }
 
-/* --- Encabezado --- */
-.header { 
-  background: linear-gradient(135deg, #a8dadc, #f1faee); 
-  color: #1d3557; 
-  padding: 40px 30px; 
-  text-align: center; 
-  position: sticky; 
-  top: 0; 
-  z-index: 10; 
-}
-.header h1 { 
-  font-family: 'Comfortaa', cursive; 
-  font-size: 2.5em; 
-  margin-bottom: 10px; 
-}
-.subtitle { 
-  font-size: 1em; 
-  font-style: italic; 
-  opacity: 0.8; 
+a:hover {
+    text-decoration: underline;
 }
 
-/* --- Contenido y Secciones --- */
-.content { 
-  padding: 40px 30px; 
-}
-.section { 
-  margin-bottom: 45px; 
-  animation: fadeUp 0.8s ease forwards; 
-  opacity: 0; /* Inicia invisible para la animación */
-}
-
-/* --- Animaciones --- */
-@keyframes fadeIn { 
-  from { opacity: 0; } 
-  to { opacity: 1; } 
-}
-@keyframes fadeUp { 
-  from { opacity: 0; transform: translateY(30px); } 
-  to { opacity: 1; transform: translateY(0); } 
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
 }
 
-.section h2 { 
-  font-size: 1.6em; 
-  margin-bottom: 15px; 
-  display: flex; 
-  align-items: center; 
-  gap: 12px; 
-  color: #e63946; 
+.btn:hover {
+    background-color: #0056b3;
 }
 
-/* --- Lista de Servicios --- */
-.service-list { 
-  display: grid; 
-  gap: 15px; 
-}
-.service-item { 
-  background: #fff1f0; 
-  padding: 18px 22px; 
-  border-radius: 15px; 
-  border-left: 6px solid #e63946; 
-  cursor: pointer; 
-  transition: transform 0.2s, box-shadow 0.2s; 
-}
-.service-item:hover { 
-  transform: translateX(5px); 
-  box-shadow: 0 6px 20px rgba(230,57,70,0.2); 
-}
-.service-item strong { 
-  color: #e63946; 
+/* Header y Navegación */
+header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* --- Etiquetas de Condiciones --- */
-.conditions { 
-  display: flex; 
-  flex-wrap: wrap; 
-  gap: 12px; 
-}
-.condition-tag { 
-  background: #f4c2c2; 
-  color: #1d3557; 
-  padding: 8px 18px; 
-  border-radius: 25px; 
-  font-weight: 600; 
-  cursor: pointer; 
-  transition: transform 0.2s, box-shadow 0.2s; 
-}
-.condition-tag:hover { 
-  transform: translateY(-2px); 
-  box-shadow: 0 4px 12px rgba(196, 47, 47, 0.2); 
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
-/* --- Formulario --- */
-form { 
-  display: flex; 
-  flex-direction: column; 
-  gap: 15px; 
-  margin-top: 20px; 
-}
-input, textarea { 
-  width: 100%; 
-  padding: 12px 15px; 
-  border-radius: 10px; 
-  border: 1px solid #ccc; 
-  font-size: 1em; 
-  font-family: inherit; 
-}
-textarea { 
-  resize: none; 
-  min-height: 120px; 
-}
-button { 
-  background: #e63946; 
-  color: #fff; 
-  border: none; 
-  padding: 12px 20px; 
-  border-radius: 10px; 
-  font-size: 1em; 
-  cursor: pointer; 
-  transition: background-color 0.3s; 
-}
-button:hover { 
-  background: #d62839; 
+nav ul li {
+    display: inline;
+    margin: 0 20px;
 }
 
-/* --- Caja de Contacto y Pie de Página --- */
-.contact-box { 
-  background: #ffe5b4; 
-  color: #1d3557; 
-  padding: 35px 30px; 
-  border-radius: 20px; 
-  text-align: center; 
-  margin-top: 20px; 
-}
-.contact-item { 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  gap: 10px; 
-}
-footer { 
-  text-align: center; 
-  font-size: 0.9em; 
-  color: #555; 
-  margin-top: 30px; 
-  padding: 20px; 
+nav ul li a {
+    font-weight: bold;
+    color: #333;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
 }
 
-/* --- Botón Flotante de WhatsApp --- */
-.whatsapp-float { 
-  position: fixed; 
-  bottom: 20px; 
-  right: 20px; 
-  background: #25D366; 
-  color: white; 
-  font-size: 28px; 
-  padding: 10px 14px; 
-  border-radius: 50%; 
-  text-decoration: none; 
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
-  transition: transform 0.2s; 
-  z-index: 2000; 
-}
-.whatsapp-float:hover { 
-  transform: scale(1.1); 
+nav ul li a:hover {
+    color: #007bff;
+    text-decoration: none;
 }
 
-/* --- Diseño Responsivo --- */
-@media (max-width: 600px) {
-  .header h1 { 
-    font-size: 2em; 
-  }
-  .content { 
-    padding: 30px 20px; 
-  }
-  .conditions { 
-    flex-direction: column; 
-  }
+/* Secciones */
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
 }
 
+/* Sección Hero */
+.hero {
+    background-color: #e9f7ff; /* Azul claro para el fondo */
+    padding: 80px 20px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección Acerca de Mí */
+.about {
+    background-color: white;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.stats div {
+    flex-basis: 30%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stats h3 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+/* Sección Servicios */
+.services {
+    background-color: #f4f4f9;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.service-item {
+    flex-basis: 30%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.service-item h3 {
+    color: #ff6b6b; /* Un color secundario */
+}
+
+/* Sección Contacto */
+.contact {
+    background-color: white;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.contact label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Importante para el padding */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+/* Responsividad básica */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .stats, .service-list {
+        flex-direction: column;
+    }
+
+    .stats div, .service-item {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+}

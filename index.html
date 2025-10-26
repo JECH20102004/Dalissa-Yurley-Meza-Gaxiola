@@ -1,38 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mi página - Dalissa Yurley</title>
-  <style>
-    body { font-family: Arial, Helvetica, sans-serif; line-height:1.6; padding:2rem; max-width:800px; margin:0 auto; }
-    header { text-align:center; margin-bottom:2rem }
-    footer { margin-top:3rem; color:#666; font-size:0.9rem }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maestra Dalissa Meza</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Hola — soy Dalissa Yurley</h1>
-    <p>Esta página está publicada desde el repositorio JECH20102004/Dalissa-Yurley-Meza-Gaxiola usando GitHub Pages.</p>
-  </header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#acerca">Acerca de Mí</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <section>
-      <h2>Bienvenido</h2>
-      <p>Este es un sitio estático mínimo. Puedes editar <code>index.html</code> en tu repositorio para cambiar el contenido.</p>
+    <section id="inicio" class="hero">
+        <img src="images/profile.jpg" alt="Dalissa Yurley Meza Gaxiola" class="profile-img">
+        <h1>Hola, soy Dalissa Yurley Meza Gaxiola</h1>
+        <p>Tu guía en el mundo de la educación y el desarrollo infantil.</p>
+        <a href="#contacto" class="btn">¡Conversemos!</a>
     </section>
 
-    <section>
-      <h2>Próximos pasos</h2>
-      <ol>
-        <li>Si aún no está activado, abre Settings → Pages y selecciona la rama <strong>main</strong> y la carpeta <strong>/ (root)</strong>, luego guarda.</li>
-        <li>Espera unos minutos y visita: <a href="https://JECH20102004.github.io/Dalissa-Yurley-Meza-Gaxiola">https://JECH20102004.github.io/Dalissa-Yurley-Meza-Gaxiola</a></li>
-      </ol>
+    <section id="acerca" class="about">
+        <h2>Acerca de Mí</h2>
+        <p>Soy una educadora apasionada con más de 10 años de experiencia, especializada en metodologías de aprendizaje innovadoras y desarrollo socioemocional. Mi misión es transformar la educación, un niño a la vez.</p>
+        <div class="stats">
+            <div>
+                <h3>10+</h3>
+                <p>Años de Experiencia</p>
+            </div>
+            <div>
+                <h3>500+</h3>
+                <p>Estudiantes Impactados</p>
+            </div>
+            <div>
+                <h3>100%</h3>
+                <p>Compromiso con la Calidad</p>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>Repositorio: <a href="https://github.com/JECH20102004/Dalissa-Yurley-Meza-Gaxiola">JECH20102004/Dalissa-Yurley-Meza-Gaxiola</a></p>
-  </footer>
+    <section id="servicios" class="services">
+        <h2>Mis Servicios</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <h3>Asesoría Educativa Personalizada</h3>
+                <p>Planes de estudio adaptados a las necesidades únicas de cada niño.</p>
+            </div>
+            <div class="service-item">
+                <h3>Talleres para Padres</h3>
+                <p>Estrategias efectivas para apoyar el aprendizaje en casa.</p>
+            </div>
+            <div class="service-item">
+                <h3>Desarrollo Socioemocional</h3>
+                <p>Herramientas para la gestión de emociones y habilidades sociales.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <h2>Contáctame</h2>
+        <p>¿Lista para empezar a transformar la educación? Escríbame.</p>
+        <form id="contact-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit" class="btn">Enviar Mensaje</button>
+            <p id="form-message" style="display:none;"></p>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Maestra Dalissa Meza. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="https://facebook.com/tumaestra" target="_blank">Facebook</a>
+            <a href="https://instagram.com/tumaestra" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
